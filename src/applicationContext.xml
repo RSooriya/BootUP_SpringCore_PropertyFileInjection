@@ -6,9 +6,11 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-<!-- creating bean -->
+<!-- loading properties file -->
 <context:property-placeholder location="classpath:sport.properties"/>
+<!-- creating bean -->
 <bean id="myCoach" class="com.sooriya.CricketCoach">
+<!-- retrieving properties from property file -->
 <property name="email" value="${email}"/>
 <property name="team" value="${team}"/>
 </bean>    
